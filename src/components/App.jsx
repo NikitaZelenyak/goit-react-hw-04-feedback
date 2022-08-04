@@ -1,9 +1,9 @@
 
 import {useState} from "react";
-import { FeedbackOptions } from "../components/FeedbackOptions/FeedbackOptions";
 import { Statistics } from "./Statistics/Statistics";
 import { Section } from "./Section/Section";
-import { Notification } from"./Notification/Notification"
+import { Notification } from "./Notification/Notification"
+import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 
 
 
