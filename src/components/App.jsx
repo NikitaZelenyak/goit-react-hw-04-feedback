@@ -1,6 +1,6 @@
 
 import {useState} from "react";
-import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
+import { FeedbackOptions } from "../components/FeedbackOptions/FeedbackOptions";
 import { Statistics } from "./Statistics/Statistics";
 import { Section } from "./Section/Section";
 import { Notification } from"./Notification/Notification"
@@ -31,12 +31,9 @@ export const App = () => {
           }}>
             <Section title={"Please leave feedback"}>
            <FeedbackOptions
-                
               onGood={ ()=> setGood(prevSt=> prevSt + 1)}
               onBad={ ()=> setBad(prevSt=> prevSt + 1)}
               onNeutral={()=> setNeutral(prevSt=> prevSt + 1)}
-            
-              
            >
                 </FeedbackOptions>
             </Section>
