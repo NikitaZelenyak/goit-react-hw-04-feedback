@@ -27,13 +27,13 @@ export const App = () => {
 
       return (
           <div style={{
-            marginLeft: 600,
+            marginLeft: 700,
         
           }}>
             <Section title={"Please leave feedback"}>
            <FeedbackOptions
-              onGood={ ()=> setGood(prevSt=> prevSt + 1)}
-              onBad={ ()=> setBad(prevSt=> prevSt + 1)}
+              onGood={()=> setGood(prevSt=> prevSt + 1)}
+              onBad={()=> setBad(prevSt=> prevSt + 1)}
               onNeutral={()=> setNeutral(prevSt=> prevSt + 1)}
            >
                 </FeedbackOptions>
