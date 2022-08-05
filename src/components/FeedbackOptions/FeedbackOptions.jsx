@@ -1,21 +1,15 @@
  import { ListButton,ItemBtn,Btn } from "./FeedbackOptions.styled"
 
-export const FeedbackOptions = ({ onGood, onBad, onNeutral }) => {
-      
+export const FeedbackOptions = ({option,onClick}) => {
+
+   const types =  Object.keys(option);
     return (
         <ListButton>
-           <ItemBtn > <Btn 
-                type='button' 
-                onClick={onGood} >Good</Btn></ItemBtn>
-               <ItemBtn > <Btn 
-                type='button' 
-                onClick={onBad}>Bad</Btn></ItemBtn>
-               <ItemBtn > <Btn 
-                type='button' 
-            onClick={onNeutral}>Neutral</Btn></ItemBtn>
+            {types.map(typ => <ItemBtn key={typ}>
+                <Btn onClick={()=>onClick(typ)}>{typ}</Btn>
+           </ItemBtn>) }
         </ListButton>
        
     )
 }
-
 

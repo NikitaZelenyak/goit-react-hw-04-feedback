@@ -13,6 +13,27 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
+  const btnType = {
+    good,
+    bad,
+    neutral
+  };
+  
+  const handlerIncrementFeedBack = (type) => {
+  switch (type) {
+    case "good":
+     setGood(prevSt=> prevSt + 1)
+      break;
+   case "bad":
+     setBad(prevSt=> prevSt + 1)
+      break;
+    case "neutral":
+   setNeutral(prevSt=> prevSt + 1)
+      break;
+    default:
+      return;
+  }
+}
 
   const countTotalFeedback = () => {
     return good + neutral + bad;
@@ -31,10 +52,9 @@ export const App = () => {
         
           }}>
             <Section title={"Please leave feedback"}>
-           <FeedbackOptions
-              onGood={()=> setGood(prevSt=> prevSt + 1)}
-              onBad={()=> setBad(prevSt=> prevSt + 1)}
-              onNeutral={()=> setNeutral(prevSt=> prevSt + 1)}
+            <FeedbackOptions
+              option={btnType}
+              onClick={handlerIncrementFeedBack}
            >
                 </FeedbackOptions>
             </Section>

@@ -17,7 +17,7 @@ list-style: none;
 export const Btn = styled.button`
 
 padding: 8px;
-/* background-color: ${(option) => {
+background-color: ${(option) => {
   const arr= Object.values(option);
 
     
@@ -30,10 +30,23 @@ padding: 8px;
 }
 
 
-}; */
-background-color: #4141a5;
+};
+
 border-radius: 8px ;
-border-color: #4141a5;
+border-color: ${(option) => {
+  const arr= Object.values(option);
+
+    
+        if (arr.includes('good')) {
+        return 'green'
+    }else if  (arr.includes('bad')) {
+        return 'red'
+        }
+ return "orange"
+}
+
+
+};
   cursor: pointer;
 
 `
